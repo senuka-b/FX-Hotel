@@ -32,7 +32,7 @@
          </font>
       </Text>
       <TextField fx:id="textFieldUsername" layoutX="616.0" layoutY="278.0" prefHeight="40.0" prefWidth="258.0" promptText="username" style="STATE_SUCCESS: true;" styleClass="center-pill" />
-      <PasswordField layoutX="616.0" layoutY="361.0" prefHeight="40.0" prefWidth="258.0" promptText="password" styleClass="center-pill" />
+      <PasswordField fx:id="textFieldPassword" layoutX="616.0" layoutY="361.0" prefHeight="40.0" prefWidth="258.0" promptText="password" styleClass="center-pill" />
       <HBox layoutX="178.0" layoutY="65.0" prefHeight="36.0" prefWidth="200.0" />
       <BorderPane fx:id="titleBar" prefHeight="59.0" prefWidth="954.0" style="-fx-border-color: #044145; -fx-background-color: #231926;" styleClass="dense">
          <right>
@@ -82,6 +82,6 @@
             </Text>
          </center>
       </BorderPane>
-      <Hyperlink layoutX="764.0" layoutY="419.0" text="Forgot Password?" />
+      <Hyperlink layoutX="764.0" layoutY="419.0" onAction="#buttonForgotPasswordOnAction" text="Forgot Password?" />
    </children>
 </AnchorPane>

@@ -2,6 +2,7 @@ package edu.icet.senuka.FXHotelManager.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
@@ -54,6 +55,16 @@ public abstract class SuperController implements Initializable {
         buttonMinimize.setOnAction(actionEvent -> {
             stage.setIconified(true);
         });
+    }
+
+    public void showAlert(Alert.AlertType type, String title, String header, String body) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(body);
+
+        alert.show();
+
     }
 
 

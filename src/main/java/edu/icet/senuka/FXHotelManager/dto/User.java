@@ -1,15 +1,13 @@
 package edu.icet.senuka.FXHotelManager.dto;
 
 import edu.icet.senuka.FXHotelManager.util.RoleType;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Builder
 public class User {
     private Long id;
     private String username;
