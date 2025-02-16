@@ -5,21 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d15f2b0-a57a-4da5-8ddc-bd5cf582461c" name="Changes" comment="Create login UI">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bcd967b7afb99d6edd7664963b3aa2af22bfe20a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/c/bcd967b7afb99d6edd7664963b3aa2af22bfe20a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/Starter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/SuperController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/login/LoginFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/login.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/user/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/CrudRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/DaoFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/SuperDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/ServiceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/SuperService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/AppModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/HibernateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/RoleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/SceneHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/SceneType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/_base.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/Starter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/login/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/login/LoginFormController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -53,10 +62,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/ICD113/JAVAFX/JavaFX-Hotel-Management/src/main/resources/view",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\assets" />
       <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resource\assets" />
@@ -80,8 +93,16 @@
       <option name="presentableId" value="Default" />
       <updated>1739635276007</updated>
       <workItem from="1739635277562" duration="462000" />
-      <workItem from="1739680349090" duration="8938000" />
+      <workItem from="1739680349090" duration="17337000" />
     </task>
+    <task id="LOCAL-00001" summary="Create login UI">
+      <created>1739726332234</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739726332234</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

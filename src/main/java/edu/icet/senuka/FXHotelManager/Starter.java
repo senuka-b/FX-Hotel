@@ -3,6 +3,8 @@ package edu.icet.senuka.FXHotelManager;
 
 import atlantafx.base.theme.Dracula;
 import edu.icet.senuka.FXHotelManager.controller.SuperController;
+import edu.icet.senuka.FXHotelManager.util.SceneHandler;
+import edu.icet.senuka.FXHotelManager.util.SceneType;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,15 +22,9 @@ public class Starter extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Application.setUserAgentStylesheet(new Dracula().getUserAgentStylesheet());
-
         stage.initStyle(StageStyle.TRANSPARENT);
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/login.fxml"));
-        AnchorPane root = loader.load();
-        SuperController controller = loader.getController();
-        controller.setStage(stage);
-
-        stage.setScene(new Scene(root));
-        stage.show();
+        SceneHandler.setStage(stage);
+        SceneHandler.changeScene(SceneType.LOGIN);
     }
 }
