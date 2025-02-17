@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--THIS FILE ACTS AS THE BASE FXML FILE WHICH ALL OTHER FXML FILES FOLLOW-->
+
+<AnchorPane prefHeight="682.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.senuka.FXHotelManager.controller.customer.CustomerFormController">
+   <children>
+
+      <HBox layoutX="178.0" layoutY="65.0" prefHeight="36.0" prefWidth="200.0" />
+      <BorderPane fx:id="titleBar" prefHeight="59.0" prefWidth="954.0" style="-fx-border-color: #044145; -fx-background-color: #231926;" styleClass="dense">
+         <right>
+            <HBox prefHeight="38.0" prefWidth="74.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="buttonMinimize" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: yellow;" text="Button">
+                     <styleClass>
+                        <String fx:value="button-icon" />
+                        <String fx:value="button-circle" />
+                        <String fx:value="danger" />
+                     </styleClass>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonClose" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" text="Button">
+                     <styleClass>
+                        <String fx:value="button-icon" />
+                        <String fx:value="button-circle" />
+                        <String fx:value="danger" />
+                     </styleClass>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+         </right>
+         <left>
+            <Text fx:id="labelHeader" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer" wrappingWidth="170.4000640869142" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="34.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+            </Text>
+         </left>
+         <center>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="success" text="Hotel Management" wrappingWidth="262.40006361007704" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Blackadder ITC" size="36.0" />
+               </font>
+            </Text>
+         </center>
+      </BorderPane>
+      <Button layoutX="50.0" layoutY="287.0" mnemonicParsing="false" onAction="#buttonAddOnAction" prefHeight="36.0" prefWidth="102.0" styleClass="success" text="Add" />
+      <TableView fx:id="tableCustomer" layoutX="36.0" layoutY="352.0" prefHeight="299.0" prefWidth="898.0">
+        <columns>
+          <TableColumn fx:id="columnID" prefWidth="119.99996566772461" text="ID" />
+          <TableColumn fx:id="columnFullName" prefWidth="206.40000915527344" text="Full Name" />
+            <TableColumn fx:id="columnPhoneNumber" prefWidth="288.79998779296875" text="Phone Number" />
+            <TableColumn fx:id="columnAddress" prefWidth="281.5999755859375" text="Address" />
+        </columns>
+      </TableView>
+      <TextField fx:id="textFieldFullName" layoutX="50.0" layoutY="101.0" prefHeight="36.0" prefWidth="334.0" promptText="Full Name" />
+      <TextField fx:id="textFieldPhoneNumber" layoutX="50.0" layoutY="158.0" prefHeight="36.0" prefWidth="334.0" promptText="Phone Number" />
+      <TextField fx:id="textFieldAddress" layoutX="50.0" layoutY="221.0" prefHeight="36.0" prefWidth="334.0" promptText="Address" styleClass="dense" />
+      <TextField fx:id="textFieldSearch" layoutX="752.0" layoutY="305.0" onKeyReleased="#textFieldSearchOnKeyRelease" promptText="Search 🔎" />
+      <Button layoutX="166.0" layoutY="287.0" mnemonicParsing="false" onAction="#buttonDeleteOnAction" prefHeight="36.0" prefWidth="102.0" styleClass="danger" text="Delete" />
+      <Button layoutX="284.0" layoutY="287.0" mnemonicParsing="false" onAction="#buttonUpdateOnAction" prefHeight="36.0" prefWidth="102.0" style="-fx-background-color: yellow; -fx-text-fill: black;" text="Update" />
+      <Text fx:id="labelHeader1" layoutX="658.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a customer from the table to automatically fill in the fields for updates!" wrappingWidth="281.6001373291017">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="59.0" fitWidth="78.0" layoutX="587.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/bulb.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="labelHeader11" layoutX="686.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start typing to filter through customers" wrappingWidth="246.4000640869142" />
+   </children>
+</AnchorPane>

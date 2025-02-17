@@ -1,6 +1,6 @@
-package edu.icet.senuka.FXHotelManager.entity.user;
+package edu.icet.senuka.FXHotelManager.entity;
 
-import edu.icet.senuka.FXHotelManager.util.RoleType;
+import edu.icet.senuka.FXHotelManager.util.types.RoleType;
 import jakarta.persistence.*;
 
 

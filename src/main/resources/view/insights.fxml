@@ -3,37 +3,17 @@
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.GaussianBlur?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="682.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.senuka.FXHotelManager.controller.login.LoginFormController">
+<!--THIS FILE ACTS AS THE BASE FXML FILE WHICH ALL OTHER FXML FILES FOLLOW-->
+
+<AnchorPane prefHeight="682.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.senuka.FXHotelManager.controller.insights.InsightFormController">
    <children>
-      <AnchorPane prefHeight="682.0" prefWidth="954.0" />
-      <ImageView blendMode="EXCLUSION" fitHeight="626.0" fitWidth="531.0" layoutY="48.0" opacity="0.5" pickOnBounds="true">
-         <image>
-            <Image url="@../assets/login.gif" />
-         </image>
-         <effect>
-            <GaussianBlur radius="0.88" />
-         </effect>
-      </ImageView>
-      <Button layoutX="691.0" layoutY="504.0" mnemonicParsing="false" onAction="#buttonLoginOnAction" prefHeight="26.0" prefWidth="97.0" styleClass="success" text="Login" />
-      <Text layoutX="691.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="97.60000000000014">
-         <font>
-            <Font size="38.0" />
-         </font>
-      </Text>
-      <TextField fx:id="textFieldUsername" layoutX="616.0" layoutY="278.0" prefHeight="40.0" prefWidth="258.0" promptText="username" style="STATE_SUCCESS: true;" styleClass="center-pill" />
-      <PasswordField fx:id="textFieldPassword" layoutX="616.0" layoutY="361.0" prefHeight="40.0" prefWidth="258.0" promptText="password" styleClass="center-pill" />
+
       <HBox layoutX="178.0" layoutY="65.0" prefHeight="36.0" prefWidth="200.0" />
       <BorderPane fx:id="titleBar" prefHeight="59.0" prefWidth="954.0" style="-fx-border-color: #044145; -fx-background-color: #231926;" styleClass="dense">
          <right>
@@ -66,7 +46,7 @@
             </HBox>
          </right>
          <left>
-            <Text fx:id="labelHeader" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!" wrappingWidth="170.4000640869142" BorderPane.alignment="CENTER">
+            <Text fx:id="labelHeader" strokeType="OUTSIDE" strokeWidth="0.0" text="Insights" wrappingWidth="170.4000640869142" BorderPane.alignment="CENTER">
                <font>
                   <Font size="34.0" />
                </font>
@@ -83,6 +63,5 @@
             </Text>
          </center>
       </BorderPane>
-      <Hyperlink layoutX="764.0" layoutY="419.0" onAction="#buttonForgotPasswordOnAction" text="Forgot Password?" />
    </children>
 </AnchorPane>

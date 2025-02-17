@@ -32,8 +32,8 @@ public class LoginFormController extends SuperController  {
 
     public void buttonLoginOnAction(ActionEvent actionEvent) {
         User user = User.builder()
-                .username(textFieldUsername.getText())
-                .password(textFieldPassword.getText())
+                .username(textFieldUsername.getText().trim())
+                .password(textFieldPassword.getText().trim())
                 .build();
 
         if (service.login(user)) {

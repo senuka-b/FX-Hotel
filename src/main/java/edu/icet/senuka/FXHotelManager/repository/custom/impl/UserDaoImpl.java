@@ -1,6 +1,6 @@
 package edu.icet.senuka.FXHotelManager.repository.custom.impl;
 
-import edu.icet.senuka.FXHotelManager.entity.user.UserEntity;
+import edu.icet.senuka.FXHotelManager.entity.UserEntity;
 import edu.icet.senuka.FXHotelManager.repository.custom.UserDao;
 import edu.icet.senuka.FXHotelManager.util.HibernateConfig;
 import org.hibernate.Session;
@@ -15,12 +15,12 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public boolean update(Long id, UserEntity entity) {
+    public boolean update(UserEntity entity) {
         return false;
     }
 
     @Override
-    public boolean delete(Long id) {
+    public boolean delete(UserEntity entity) {
         return false;
     }
 

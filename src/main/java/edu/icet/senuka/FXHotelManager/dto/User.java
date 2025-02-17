@@ -1,6 +1,6 @@
 package edu.icet.senuka.FXHotelManager.dto;
 
-import edu.icet.senuka.FXHotelManager.util.RoleType;
+import edu.icet.senuka.FXHotelManager.util.types.RoleType;
 import lombok.*;
 
 @Data

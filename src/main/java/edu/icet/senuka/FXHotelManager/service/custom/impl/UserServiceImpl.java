@@ -2,10 +2,9 @@ package edu.icet.senuka.FXHotelManager.service.custom.impl;
 
 import com.google.inject.Inject;
 import edu.icet.senuka.FXHotelManager.dto.User;
-import edu.icet.senuka.FXHotelManager.entity.user.UserEntity;
+import edu.icet.senuka.FXHotelManager.entity.UserEntity;
 import edu.icet.senuka.FXHotelManager.repository.custom.UserDao;
 import edu.icet.senuka.FXHotelManager.service.custom.UserService;
-import lombok.RequiredArgsConstructor;
 
 public class UserServiceImpl implements UserService {
 
