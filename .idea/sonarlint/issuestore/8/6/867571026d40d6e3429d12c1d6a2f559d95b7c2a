@@ -1,0 +1,14 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ô•×Æøÿÿÿÿ8‹©µ‚Ñ2
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿ8©µ‚Ñ2
+£
+java:S11865"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù¢Ğ½üÿÿÿÿ8ª·‚Ñ2
+T
+java:S1172!"2Remove this unused method parameter "actionEvent".(ÎÅ‹ˆıÿÿÿÿ8©µ‚Ñ2
+]	java:S125)"<This block of commented-out lines of code should be removed.(Ùä€éÿÿÿÿÿ8Îš¸‚Ñ2
+o
+java:S1128"MRemove this unused import 'edu.icet.senuka.FXHotelManager.util.SceneHandler'.(ºó«öûÿÿÿÿ8İËĞ¦Ñ2
+S
+java:S1128
+"6Remove this unused import 'javafx.fxml.Initializable'.(™ÎùÆ8İËĞ¦Ñ2

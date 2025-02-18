@@ -68,3 +68,5 @@ Ysrc/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/CustomerServic
 Xsrc/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/CustomerDaoImpl.java,e\0\e0a016066c4ccc8ad79f2e9642cb02c84385f482
 Œ
 \src/main/java/edu/icet/senuka/FXHotelManager/controller/customer/CustomerFormController.java,c\9\c99b51f76250f7f24d7e00daae6e784caf2ff2ca
+„
+Tsrc/main/java/edu/icet/senuka/FXHotelManager/controller/room/RoomFormController.java,2\9\29fe6ff1f183d563e8718787147fdd08d5d8bb3c

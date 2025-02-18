@@ -2,12 +2,16 @@ package edu.icet.senuka.FXHotelManager.util;
 
 import com.google.inject.AbstractModule;
 import edu.icet.senuka.FXHotelManager.repository.custom.CustomerDao;
+import edu.icet.senuka.FXHotelManager.repository.custom.RoomDao;
 import edu.icet.senuka.FXHotelManager.repository.custom.UserDao;
 import edu.icet.senuka.FXHotelManager.repository.custom.impl.CustomerDaoImpl;
+import edu.icet.senuka.FXHotelManager.repository.custom.impl.RoomDaoImpl;
 import edu.icet.senuka.FXHotelManager.repository.custom.impl.UserDaoImpl;
 import edu.icet.senuka.FXHotelManager.service.custom.CustomerService;
+import edu.icet.senuka.FXHotelManager.service.custom.RoomService;
 import edu.icet.senuka.FXHotelManager.service.custom.UserService;
 import edu.icet.senuka.FXHotelManager.service.custom.impl.CustomerServiceImpl;
+import edu.icet.senuka.FXHotelManager.service.custom.impl.RoomServiceImpl;
 import edu.icet.senuka.FXHotelManager.service.custom.impl.UserServiceImpl;
 
 
@@ -18,10 +22,13 @@ public class AppModule extends AbstractModule {
             // Service
             bind(UserService.class).to(UserServiceImpl.class);
             bind(CustomerService.class).to(CustomerServiceImpl.class);
+            bind(RoomService.class).to(RoomServiceImpl.class);
 
             // Dao
             bind(UserDao.class).to(UserDaoImpl.class);
             bind(CustomerDao.class).to(CustomerDaoImpl.class);
+            bind(RoomDao.class).to(RoomDaoImpl.class);
+
         }
 
 }

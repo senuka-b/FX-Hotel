@@ -1,0 +1,8 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…•ýîúÿÿÿÿ8™ÎÑ™Ñ2
+m
+java:S3655M"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(æ©–Ý8©ÎÑ™Ñ2
+N
+java:S1602B",Remove useless curly braces around statement(ëÂüÖÿÿÿÿÿ8®ÎÑ™Ñ2
+U
+java:S1128"3Remove this unused import 'javafx.scene.text.Text'.(˜ÿ‡Üþÿÿÿÿ8°ÎÑ™Ñ2

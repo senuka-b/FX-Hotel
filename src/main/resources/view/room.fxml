@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--THIS FILE ACTS AS THE BASE FXML FILE WHICH ALL OTHER FXML FILES FOLLOW-->
+
+<AnchorPane prefHeight="682.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.senuka.FXHotelManager.controller.room.RoomFormController">
+   <children>
+      <BorderPane fx:id="titleBar" prefHeight="59.0" prefWidth="954.0" style="-fx-border-color: #044145; -fx-background-color: #231926;" styleClass="dense">
+         <right>
+            <HBox prefHeight="38.0" prefWidth="74.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="buttonMinimize" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: yellow;" text="Button">
+                     <styleClass>
+                        <String fx:value="button-icon" />
+                        <String fx:value="button-circle" />
+                        <String fx:value="danger" />
+                     </styleClass>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonClose" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" text="Button">
+                     <styleClass>
+                        <String fx:value="button-icon" />
+                        <String fx:value="button-circle" />
+                        <String fx:value="danger" />
+                     </styleClass>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+         </right>
+         <left>
+            <Text fx:id="labelHeader" strokeType="OUTSIDE" strokeWidth="0.0" text="Rooms" wrappingWidth="170.4000640869142" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="34.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+            </Text>
+         </left>
+         <center>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="success" text="Hotel Management" wrappingWidth="262.40006361007704" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Blackadder ITC" size="36.0" />
+               </font>
+            </Text>
+         </center>
+      </BorderPane>
+      <Accordion layoutX="148.0" layoutY="138.0" />
+      <ScrollPane layoutX="32.0" layoutY="281.0" vbarPolicy="NEVER">
+         <content>
+            <TilePane fx:id="mainTilePane" hgap="10.0" prefHeight="363.0" prefWidth="710.0" style="-fx-background-color: #22242E;" vgap="10.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #10c95a;" styleClass="success" text="1" />
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #b0933c;" text="2" />
+               </children>
+            </TilePane>
+         </content>
+      </ScrollPane>
+      <Label layoutX="32.0" layoutY="240.0" styleClass="success" text="Available">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="240.0" styleClass="warning" text="Occupied">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Text fx:id="labelHeader1" layoutX="91.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a room to view it's information!" wrappingWidth="281.6001373291017">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="59.0" fitWidth="78.0" layoutX="31.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/bulb.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="765.0" layoutY="359.0" mnemonicParsing="false" onAction="#buttonAddOnAction" prefHeight="36.0" prefWidth="152.0" styleClass="success" text="Add Room" />
+      <Button layoutX="765.0" layoutY="417.0" mnemonicParsing="false" onAction="#buttonDeleteOnAction" prefHeight="36.0" prefWidth="152.0" styleClass="danger" text="Delete Room" />
+      <TextField fx:id="textFieldRoomNumber" disable="true" layoutX="674.0" layoutY="113.0" promptText="Room Number" />
+      <TextField fx:id="textFieldPricePerStay" layoutX="674.0" layoutY="222.0" promptText="Price Per Stay" />
+      <ComboBox fx:id="comboBoxRoomType" layoutX="674.0" layoutY="166.0" prefHeight="36.0" prefWidth="182.0" promptText="Room Type" />
+      <ComboBox fx:id="comboBoxAvailability" layoutX="460.0" layoutY="166.0" prefHeight="36.0" prefWidth="182.0" promptText="Availability" />
+      <Button layoutX="765.0" layoutY="479.0" mnemonicParsing="false" onAction="#buttonUpdateOnAction" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: yellow;" styleClass="danger" text="Update Room" />
+      <Text fx:id="labelHeader11" layoutX="519.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number" wrappingWidth="116.79996337890611">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="labelHeader111" layoutX="527.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price Per Stay" wrappingWidth="108.79996337890611">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

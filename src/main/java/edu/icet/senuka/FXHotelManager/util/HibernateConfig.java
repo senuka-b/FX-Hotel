@@ -4,6 +4,7 @@ package edu.icet.senuka.FXHotelManager.util;
 
 
 import edu.icet.senuka.FXHotelManager.entity.CustomerEntity;
+import edu.icet.senuka.FXHotelManager.entity.RoomEntity;
 import edu.icet.senuka.FXHotelManager.entity.UserEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -24,6 +25,7 @@ public class HibernateConfig {
         Metadata build = new MetadataSources(registryBuilder)
                 .addAnnotatedClass(UserEntity.class)
                 .addAnnotatedClass(CustomerEntity.class)
+                .addAnnotatedClass(RoomEntity.class)
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
                 .build();
