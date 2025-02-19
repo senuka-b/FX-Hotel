@@ -10,9 +10,12 @@ import javafx.animation.Timeline;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import jdk.jshell.spi.ExecutionControl;
 import lombok.Getter;
@@ -26,7 +29,6 @@ public class SceneHandler {
     private static SuperController controller;
     private static Scene scene;
 
-
     public static void changeScene(SceneType type) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(SceneHandler.class.getResource(type.getPath()));
@@ -37,7 +39,6 @@ public class SceneHandler {
         AnchorPane root = loader.load();
 
         if (type == SceneType.LOGIN || type == SceneType.DASHBOARD) {
-            System.out.println("Yes");
 
             controller = loader.getController();
             controller.setStage(stage);
@@ -61,8 +62,32 @@ public class SceneHandler {
 
     }
 
+    public static Stage createDialog(SceneType sceneType) throws IOException {
+        FXMLLoader loader = new FXMLLoader(SceneHandler.class.getResource(sceneType.getPath()));
+
+        Injector injector = Guice.createInjector(new AppModule());
+        loader.setControllerFactory(injector::getInstance);
+
+        Stage dialogStage = new Stage();
+        dialogStage.initStyle(StageStyle.TRANSPARENT);
+        dialogStage.setScene(new Scene(loader.load()));
+
+        dialogStage.initOwner(stage);
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+
+        SuperController dialogController = loader.getController();
+        dialogController.setStage(dialogStage);
+
+        return dialogStage;
+
+    }
+
     public static void setStage(Stage primaryStage) {
         stage = primaryStage;
+    }
+
+    public static Stage getStage() {
+        return stage;
     }
 
 

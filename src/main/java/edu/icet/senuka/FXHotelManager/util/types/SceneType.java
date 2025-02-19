@@ -13,8 +13,8 @@ public enum SceneType {
     CHECKINCHECKOUT("/view/checkinout.fxml"),
     BILLING("/view/billing.fxml"),
     REPORTS("/view/reports.fxml"),
-    USERS("/view/users.fxml");
-
+    USERS("/view/users.fxml"),
+    VIEWPAYMENTDIALOG("/view/dialogs/view_payment.fxml");
 
     private final String path;
 

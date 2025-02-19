@@ -1,20 +1,33 @@
 package edu.icet.senuka.FXHotelManager.controller.billing;
 
+import atlantafx.base.controls.ModalPane;
+import atlantafx.base.layout.ModalBox;
 import com.google.inject.Inject;
 import edu.icet.senuka.FXHotelManager.controller.SuperController;
 import edu.icet.senuka.FXHotelManager.dto.Payment;
 import edu.icet.senuka.FXHotelManager.dto.Reservation;
 import edu.icet.senuka.FXHotelManager.service.custom.PaymentService;
 import edu.icet.senuka.FXHotelManager.service.custom.ReservationService;
+import edu.icet.senuka.FXHotelManager.util.SceneHandler;
 import edu.icet.senuka.FXHotelManager.util.types.PaymentType;
+import edu.icet.senuka.FXHotelManager.util.types.SceneType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class BillingFormController extends SuperController {
@@ -121,10 +134,14 @@ public class BillingFormController extends SuperController {
         }
     }
 
-    public void buttonViewAllPayments(ActionEvent actionEvent) {
+    public void buttonViewAllPayments(ActionEvent actionEvent) throws IOException {
+        SceneHandler.createDialog(SceneType.VIEWPAYMENTDIALOG).show();
+
     }
 
     public void comboBoxReservationOnAction(ActionEvent actionEvent) {
         setLabelCalculatedAmountValue();
     }
+
+
 }

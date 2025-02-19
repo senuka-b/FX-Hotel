@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--THIS FILE ACTS AS THE BASE FXML FILE WHICH ALL OTHER FXML FILES FOLLOW-->
+
+<AnchorPane prefHeight="586.0" prefWidth="654.0" style="-fx-border-color: cyan; -fx-border-width: 1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.senuka.FXHotelManager.controller.billing.ViewPaymentDialogFormController">
+   <children>
+
+      <HBox layoutX="178.0" layoutY="65.0" prefHeight="36.0" prefWidth="200.0" />
+      <BorderPane fx:id="titleBar" prefHeight="59.0" prefWidth="882.0" style="-fx-border-color: #044145; -fx-background-color: #231926;" styleClass="dense">
+         <right>
+            <HBox prefHeight="38.0" prefWidth="74.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="buttonMinimize" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: yellow;" text="Button">
+                     <styleClass>
+                        <String fx:value="button-icon" />
+                        <String fx:value="button-circle" />
+                        <String fx:value="danger" />
+                     </styleClass>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonClose" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" text="Button">
+                     <styleClass>
+                        <String fx:value="button-icon" />
+                        <String fx:value="button-circle" />
+                        <String fx:value="danger" />
+                     </styleClass>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+         </right>
+         <left>
+            <Text fx:id="labelHeader" strokeType="OUTSIDE" strokeWidth="0.0" text="View Payments" wrappingWidth="229.60004577636732" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="34.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+            </Text>
+         </left>
+      </BorderPane>
+      <TableView fx:id="tablePayment" layoutX="16.0" layoutY="124.0" prefHeight="431.0" prefWidth="852.0">
+        <columns>
+          <TableColumn fx:id="columnPaymentID" prefWidth="107.20001411437988" text="Payment ID" />
+          <TableColumn fx:id="columnReservationID" prefWidth="154.39998626708984" text="Reservation ID" />
+            <TableColumn fx:id="columnCustomerName" prefWidth="152.79998779296875" text="Customer Name" />
+            <TableColumn fx:id="columnAmountToBePaid" prefWidth="152.00003051757812" text="Amount To Be Paid" />
+            <TableColumn fx:id="columnAmountPaid" prefWidth="152.00003051757812" text="Amount Paid" />
+            <TableColumn fx:id="columnPaymentType" prefWidth="152.00003051757812" text="Payment Type" />
+        </columns>
+      </TableView>
+      <Text fx:id="labelHeader12" layoutX="505.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To return to the main window, close this dialog!" wrappingWidth="359.2001129150392">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="51.0" fitWidth="43.0" layoutX="453.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/bulb.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

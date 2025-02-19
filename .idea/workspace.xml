@@ -4,28 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d15f2b0-a57a-4da5-8ddc-bd5cf582461c" name="Changes" comment="Create Check In Check Out Functionality">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/billing/BillingFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/PaymentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/PaymentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/PaymentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/PaymentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/payment-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/payment-method.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/billing.fxml" afterDir="false" />
+    <list default="true" id="7d15f2b0-a57a-4da5-8ddc-bd5cf582461c" name="Changes" comment="Create billing functionality">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/billing/ViewPaymentDialogFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/report/ReportFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/ReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/ReportServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/ReportType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/report-customer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/report_customer.jrxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/dialogs/view_payment.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/reports.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/checkinout/CheckInOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/checkinout/CheckInOutFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/ReservationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/ReservationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/ReservationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/ReservationDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/CheckInOutServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/CheckInOutServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/ReservationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/billing/BillingFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/billing/BillingFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/AppModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/AppModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/HibernateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/checkinout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/checkinout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/SceneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/SceneHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/SceneType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/SceneType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,24 +52,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/ICD113/JAVAFX/JavaFX-Hotel-Management/src/main/resources/view&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/ICD113/JAVAFX/JavaFX-Hotel-Management/src/main/resources/reports",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="edu.icet.senuka.FXHotelManager.controller.report" />
       <recent name="edu.icet.senuka.FXHotelManager.controller.reservation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\reports" />
+      <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\view\dialogs" />
       <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -106,7 +104,7 @@
       <workItem from="1739815383667" duration="9000" />
       <workItem from="1739855978540" duration="19783000" />
       <workItem from="1739883863482" duration="11888000" />
-      <workItem from="1739937787916" duration="29903000" />
+      <workItem from="1739937787916" duration="45410000" />
     </task>
     <task id="LOCAL-00001" summary="Create login UI">
       <created>1739726332234</created>
@@ -164,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739966565775</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Create billing functionality">
+      <created>1739979661715</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1739979661715</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +194,8 @@
     <MESSAGE value="Create Room Functionality" />
     <MESSAGE value="Create Reservation Functionality" />
     <MESSAGE value="Create Check In Check Out Functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Check In Check Out Functionality" />
+    <MESSAGE value="Create billing functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create billing functionality" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaFX_Hotel_Management$Run_main.ic" NAME="Run main Coverage Results" MODIFIED="1739883789258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
