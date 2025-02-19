@@ -1,0 +1,6 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÙÆ®îÿÿÿÿÿ8«–ôĞÑ2
+s
+java:S1128"QRemove this unused import 'edu.icet.senuka.FXHotelManager.entity.CustomerEntity'.(¨ãüæşÿÿÿÿ8ş¬õĞÑ2
+Q
+java:S1128"4Remove this unused import 'org.hibernate.Hibernate'.(óñ‹è8ş¬õĞÑ2

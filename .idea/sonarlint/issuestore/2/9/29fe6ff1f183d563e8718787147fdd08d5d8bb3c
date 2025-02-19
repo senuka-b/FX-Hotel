@@ -1,0 +1,16 @@
+
+i
+java:S1192f"GDefine a constant instead of duplicating this literal "Error!" 3 times.(½à¯úÿÿÿÿ8¯èàÆÑ2
+f
+java:S1192y"IDefine a constant instead of duplicating this literal "Success!" 3 times.(“êÇä8¯èàÆÑ2
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Û»öúıÿÿÿÿ8°èàÆÑ2
+`
+java:S3358E"DExtract this nested ternary operation into an independent statement.(•ö·m8íèàÆÑ2
+N
+java:S1602M",Remove useless curly braces around statement(ãÑ·œúÿÿÿÿ8îèàÆÑ2
+O
+java:S1172a"2Remove this unused method parameter "actionEvent".(öÒƒá8ğèàÆÑ2
+U
+java:S1172‚"2Remove this unused method parameter "actionEvent".(ÿı–ûÿÿÿÿ8óèàÆÑ2
+U
+java:S1172œ"2Remove this unused method parameter "actionEvent".(ë»ˆßüÿÿÿÿ8ôèàÆÑ2

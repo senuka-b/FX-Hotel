@@ -1,0 +1,32 @@
+
+Q
+java:S3740P"/Provide the parametrized type for this generic.(¤£Î§úÿÿÿÿ8ø®ºÓÑ2
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ı®³®8ú®ºÓÑ2
+¤
+java:S1186¥"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÿı–ûÿÿÿÿ8¯ºÓÑ2
+¤
+java:S1186¨"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ë»ˆßüÿÿÿÿ8¯ºÓÑ2
+¤
+java:S1186«"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(—ÀÒ“úÿÿÿÿ8¯ºÓÑ2
+¤
+java:S1186®"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ú¿ü‹ÿÿÿÿÿ8¯ºÓÑ2
+Ÿ
+java:S1186±"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†Ã´İ8¯ºÓÑ2
+L	java:S106m"+Replace this use of System.out by a logger.(…ùŸàıÿÿÿÿ8üÁÆÓÑ2
+P
+java:S1172Œ"2Remove this unused method parameter "actionEvent".(öÒƒá8š¯ºÓÑ2
+g
+java:S1128"JRemove this unused import 'edu.icet.senuka.FXHotelManager.dto.CheckInOut'.(˜ØË–8œ¯ºÓÑ2
+u
+java:S1128	"SRemove this unused import 'edu.icet.senuka.FXHotelManager.entity.CheckInOutEntity'.(¨®–àûÿÿÿÿ8œ¯ºÓÑ2
+v
+java:S1128
+"TRemove this unused import 'edu.icet.senuka.FXHotelManager.entity.ReservationEntity'.(Œ²‹âûÿÿÿÿ8œ¯ºÓÑ2
+~
+java:S1128"\Remove this unused import 'edu.icet.senuka.FXHotelManager.service.custom.CheckInOutService'.(É‰Õœÿÿÿÿÿ8œ¯ºÓÑ2
+l
+java:S1128"ORemove this unused import 'edu.icet.senuka.FXHotelManager.util.types.RoomType'.(â”Úæ8œ¯ºÓÑ2
+Z
+java:S1128"8Remove this unused import 'org.modelmapper.ModelMapper'.(ó¿Ôúÿÿÿÿ8œ¯ºÓÑ2
+K
+java:S1128".Remove this unused import 'java.util.Objects'.(¼¸õ›8œ¯ºÓÑ2

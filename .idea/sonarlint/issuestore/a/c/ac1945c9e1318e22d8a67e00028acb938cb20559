@@ -1,0 +1,7 @@
+
+r	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÓ³­úÿÿÿÿ8‚Í°ÉÑ2
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÙÆ®îÿÿÿÿÿ8ƒÍ°ÉÑ2
+Q
+java:S1128"4Remove this unused import 'org.hibernate.Hibernate'.(óñ‹è8À™ĞĞÑ2
+Y
+java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8àÈÑÑ2

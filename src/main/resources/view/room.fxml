@@ -76,6 +76,7 @@
                <children>
                   <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #10c95a;" styleClass="success" text="1" />
                   <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #b0933c;" text="2" />
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: A888B5;" text="3" />
                </children>
             </TilePane>
          </content>
@@ -117,5 +118,10 @@
             <Font size="17.0" />
          </font>
       </Text>
+      <Label layoutX="232.0" layoutY="241.0" style="-fx-text-fill: A888B5;" styleClass="warning" text="Booked">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

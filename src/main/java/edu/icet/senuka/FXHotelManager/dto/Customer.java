@@ -15,4 +15,9 @@ public class Customer {
     private String phoneNumber;
     private String address;
 
+    @Override
+    public String toString() {
+        return String.format("[%d] %s", id, fullName);
+    }
+
 }

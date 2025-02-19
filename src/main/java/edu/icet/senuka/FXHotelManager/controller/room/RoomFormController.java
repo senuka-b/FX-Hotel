@@ -4,7 +4,7 @@ import com.google.inject.Inject;
 import edu.icet.senuka.FXHotelManager.controller.SuperController;
 import edu.icet.senuka.FXHotelManager.dto.Room;
 import edu.icet.senuka.FXHotelManager.service.custom.RoomService;
-import edu.icet.senuka.FXHotelManager.util.types.Availability;
+import edu.icet.senuka.FXHotelManager.util.types.AvailabilityType;
 import edu.icet.senuka.FXHotelManager.util.types.RoomType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 public class RoomFormController extends SuperController {
 
     @FXML
-    private ComboBox<Availability> comboBoxAvailability;
+    private ComboBox<AvailabilityType> comboBoxAvailability;
 
     @FXML
     private ComboBox<RoomType> comboBoxRoomType;
@@ -53,7 +53,7 @@ public class RoomFormController extends SuperController {
         comboBoxRoomType.getItems().addAll(RoomType.values());
         comboBoxRoomType.getSelectionModel().select(0);
 
-        comboBoxAvailability.getItems().addAll(Availability.values());
+        comboBoxAvailability.getItems().addAll(AvailabilityType.values());
         comboBoxAvailability.getSelectionModel().select(0);
     }
 
@@ -65,7 +65,9 @@ public class RoomFormController extends SuperController {
             Button button = new Button(room.getId()+"");
             button.setStyle(
                     "-fx-background-color: " +
-                            (room.getAvailability().equals(Availability.Occupied) ? "#b0933c" : "#10c95a")
+                            (room.getAvailability().equals(AvailabilityType.Occupied) ? "#b0933c"
+                                    : room.getAvailability().equals(AvailabilityType.Available) ? "#10c95a"
+                                    : "#A888B5")
             );
 
             button.getStyleClass().add("success");

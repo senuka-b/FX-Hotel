@@ -57,7 +57,7 @@ public abstract class SuperController implements Initializable {
         if (buttonClose == null || buttonMinimize == null) return;
 
         buttonClose.setOnAction(actionEvent -> {
-            Timeline animation = Animations.fadeOut(stage.getScene().getRoot(), Duration.seconds(2));
+            Timeline animation = Animations.fadeOut(stage.getScene().getRoot(), Duration.seconds(1));
             animation.setOnFinished(event -> stage.close());
 
             animation.playFromStart();

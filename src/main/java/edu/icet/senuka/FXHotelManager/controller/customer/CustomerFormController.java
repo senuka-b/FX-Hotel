@@ -88,12 +88,12 @@ public class CustomerFormController extends SuperController {
 
         if (selectedItem != null) {
             if (service.deleteCustomer(selectedItem)) {
-                showAlert(
-                        Alert.AlertType.INFORMATION,
-                        "Success!",
-                        "Deleted Customer successfully",
-                        "The customer with the name " + selectedItem.getFullName() + " has been deleted succesfully!"
-                );
+                    showAlert(
+                            Alert.AlertType.INFORMATION,
+                            "Success!",
+                            "Deleted Customer successfully",
+                            "The customer with the name " + selectedItem.getFullName() + " has been deleted succesfully!"
+                    );
 
                 loadTable();
                 clearTextFields();
