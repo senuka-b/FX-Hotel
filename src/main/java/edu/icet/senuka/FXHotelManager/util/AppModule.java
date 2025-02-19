@@ -17,6 +17,7 @@ public class AppModule extends AbstractModule {
             bind(RoomService.class).to(RoomServiceImpl.class);
             bind(ReservationService.class).to(ReservationServiceImpl.class);
             bind(CheckInOutService.class).to(CheckInOutServiceImpl.class);
+            bind(PaymentService.class).to(PaymentServiceImpl.class);
 
             // Dao
             bind(UserDao.class).to(UserDaoImpl.class);
@@ -24,6 +25,7 @@ public class AppModule extends AbstractModule {
             bind(RoomDao.class).to(RoomDaoImpl.class);
             bind(ReservationDao.class).to(ReservationDaoImpl.class);
             bind(CheckInOutDao.class).to(CheckInOutDaoImpl.class);
+            bind(PaymentDao.class).to(PaymentDaoImpl.class);
 
         }
 

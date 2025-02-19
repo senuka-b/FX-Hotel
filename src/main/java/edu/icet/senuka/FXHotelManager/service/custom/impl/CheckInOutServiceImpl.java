@@ -13,6 +13,7 @@ import org.modelmapper.ModelMapper;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 public class CheckInOutServiceImpl implements CheckInOutService {
@@ -61,6 +62,11 @@ public class CheckInOutServiceImpl implements CheckInOutService {
             LocalDate localCheckOutDate = checkInOut.getCheckOutDate();
 
             if (localCheckOutDate.isAfter(minimumDate)) {
+
+                checkInOut.setTotalPrice(
+                        room.getPricePerNight() * (ChronoUnit.DAYS.between(checkInOut.getCheckInDate(), localCheckOutDate))
+                );
+
                 return dao.update(mapper.map(checkInOut, CheckInOutEntity.class))
                         && roomDao.update(mapper.map(room, RoomEntity.class));
             }

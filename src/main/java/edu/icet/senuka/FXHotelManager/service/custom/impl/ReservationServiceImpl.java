@@ -119,4 +119,15 @@ public class ReservationServiceImpl implements ReservationService {
 
         return reservationList;
     }
+
+    @Override
+    public List<Reservation> getCheckOutReservations() {
+        List<Reservation> reservationList = new ArrayList<>();
+
+        dao.getCheckOutReservations().forEach(reservationEntity -> reservationList.add(
+                mapper.map(reservationEntity, Reservation.class)
+        ));
+
+        return reservationList;
+    }
 }

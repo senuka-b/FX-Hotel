@@ -67,4 +67,14 @@ public class ReservationDaoImpl implements ReservationDao {
 
     }
 
+    @Override
+    public List<ReservationEntity> getCheckOutReservations() {
+        Session session = HibernateConfig.getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<ReservationEntity> from_reservationEntity = session.createQuery("FROM ReservationEntity r WHERE  r.checkInOut.checkOutDate IS NOT NULL", ReservationEntity.class).list();
+        transaction.commit();
+
+        return from_reservationEntity;
+    }
 }

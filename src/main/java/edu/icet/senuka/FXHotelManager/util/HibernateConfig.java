@@ -26,6 +26,7 @@ public class HibernateConfig {
                 .addAnnotatedClass(RoomEntity.class)
                 .addAnnotatedClass(CheckInOutEntity.class)
                 .addAnnotatedClass(ReservationEntity.class)
+                .addAnnotatedClass(PaymentEntity.class)
 
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)

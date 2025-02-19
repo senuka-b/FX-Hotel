@@ -14,4 +14,6 @@ public interface ReservationService extends SuperService {
     public boolean cancelReservation(Reservation reservation);
     public boolean markReservationAsPending(Reservation reservation);
     public List<Reservation> getAll();
+
+    public List<Reservation> getCheckOutReservations();
 }

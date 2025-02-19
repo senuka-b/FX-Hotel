@@ -1,38 +1,25 @@
 package edu.icet.senuka.FXHotelManager.controller.checkinout;
 
 import atlantafx.base.controls.Calendar;
-import atlantafx.base.theme.Styles;
 import com.google.inject.Inject;
 import edu.icet.senuka.FXHotelManager.controller.SuperController;
 import edu.icet.senuka.FXHotelManager.dto.Reservation;
 import edu.icet.senuka.FXHotelManager.service.custom.CheckInOutService;
 import edu.icet.senuka.FXHotelManager.service.custom.ReservationService;
 import edu.icet.senuka.FXHotelManager.util.types.ReservationStatusType;
-import javafx.animation.Animation;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
-import javafx.util.Duration;
 
 import java.net.URL;
-import java.util.Date;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 
 
 
-public class CheckInOutController extends SuperController {
+public class CheckInOutFormController extends SuperController {
 
     @FXML
     private Pane panelCheckInCalendar;
