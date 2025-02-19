@@ -17,7 +17,6 @@ public class CheckInOutDaoImpl implements CheckInOutDao {
         Transaction transaction = session.beginTransaction();
 
 
-
         session.persist(entity);
         transaction.commit();
 

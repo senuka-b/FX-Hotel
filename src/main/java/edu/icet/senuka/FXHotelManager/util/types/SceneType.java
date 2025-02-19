@@ -10,7 +10,7 @@ public enum SceneType {
     CUSTOMER("/view/customer.fxml"),
     ROOM("/view/room.fxml"),
     RESERVATION("/view/reservation.fxml"),
-    CHECKINCHECKOUT("/view/checkin.fxml"),
+    CHECKINCHECKOUT("/view/checkinout.fxml"),
     BILLING("/view/billing.fxml"),
     REPORTS("/view/reports.fxml"),
     USERS("/view/users.fxml");

@@ -66,7 +66,9 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public boolean updateReservation(Reservation reservation) {
-        return dao.update(mapper.map(reservation, ReservationEntity.class));
+        return dao.update(mapper.map(reservation, ReservationEntity.class)) && roomDao.update(
+                mapper.map(reservation.getRoom(), RoomEntity.class)
+        );
     }
 
     @Override
@@ -82,6 +84,8 @@ public class ReservationServiceImpl implements ReservationService {
     @Override
     public boolean confirmReservation(Reservation reservation) {
         reservation.setStatus(ReservationStatusType.Confirmed);
+        reservation.getRoom().setAvailability(AvailabilityType.Booked);
+
 
         return updateReservation(reservation);
     }
@@ -89,6 +93,7 @@ public class ReservationServiceImpl implements ReservationService {
     @Override
     public boolean cancelReservation(Reservation reservation) {
         reservation.setStatus(ReservationStatusType.Cancelled);
+        reservation.getRoom().setAvailability(AvailabilityType.Available);
 
         return updateReservation(reservation);
     }
@@ -96,6 +101,8 @@ public class ReservationServiceImpl implements ReservationService {
     @Override
     public boolean markReservationAsPending(Reservation reservation) {
         reservation.setStatus(ReservationStatusType.Pending);
+        reservation.getRoom().setAvailability(AvailabilityType.Booked);
+
 
         return updateReservation(reservation);
     }

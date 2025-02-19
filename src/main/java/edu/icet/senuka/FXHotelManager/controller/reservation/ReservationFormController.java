@@ -314,6 +314,8 @@ public class ReservationFormController extends SuperController {
                     "Mark Reservation as Pending",
                     "Successfully marked reservation as pending!"
             );
+
+            loadReservations();
         }
     }
 }

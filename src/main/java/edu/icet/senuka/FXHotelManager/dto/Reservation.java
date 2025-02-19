@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 
 @Data
 @AllArgsConstructor
@@ -23,14 +23,14 @@ public class Reservation implements Cloneable {
 
     public String getCheckInDateValue() {
         if (checkInOut.getCheckInDate() != null)
-            return new SimpleDateFormat("yyyy/MM/dd").format(checkInOut.getCheckInDate());
+            return checkInOut.getCheckInDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
         else return "Not specified!";
     }
 
     public String getCheckOutDateValue() {
         if (checkInOut.getCheckOutDate() != null)
-            return new SimpleDateFormat("yyyy-MM-dd").format(checkInOut.getCheckOutDate());
+            return checkInOut.getCheckOutDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
         else return "Not specified!";
 
@@ -53,6 +53,11 @@ public class Reservation implements Cloneable {
     public Object clone() throws CloneNotSupportedException {
         // Returning a clone of the current object
         return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("[%d] | Customer: %s - Phone : %s | Room #%s", id, getCustomerNameValue(), getCustomerPhoneNumberValue(),  getRoomIdValue());
     }
 
 }
