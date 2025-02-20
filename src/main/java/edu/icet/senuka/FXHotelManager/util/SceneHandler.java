@@ -5,6 +5,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import edu.icet.senuka.FXHotelManager.controller.SuperController;
 import edu.icet.senuka.FXHotelManager.controller.dashboard.DashboardFormController;
+import edu.icet.senuka.FXHotelManager.dto.User;
 import edu.icet.senuka.FXHotelManager.util.types.SceneType;
 import javafx.animation.Timeline;
 import javafx.beans.value.ChangeListener;
@@ -29,7 +30,11 @@ public class SceneHandler {
     private static SuperController controller;
     private static Scene scene;
 
+    private static User user;
+
     public static void changeScene(SceneType type) throws IOException {
+
+        System.out.println("USER " + user);
 
         FXMLLoader loader = new FXMLLoader(SceneHandler.class.getResource(type.getPath()));
 
@@ -90,6 +95,11 @@ public class SceneHandler {
         return stage;
     }
 
+    public static void setUser(User currentUser) {
+        user = currentUser;
+    }
+
+    public static User getUser() { return user; }
 
 
     }

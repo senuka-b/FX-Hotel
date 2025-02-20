@@ -7,6 +7,7 @@ import edu.icet.senuka.FXHotelManager.dto.Room;
 import edu.icet.senuka.FXHotelManager.service.custom.CustomerService;
 import edu.icet.senuka.FXHotelManager.service.custom.ReservationService;
 import edu.icet.senuka.FXHotelManager.service.custom.RoomService;
+import edu.icet.senuka.FXHotelManager.util.SceneHandler;
 import edu.icet.senuka.FXHotelManager.util.types.AvailabilityType;
 import edu.icet.senuka.FXHotelManager.util.types.RoomType;
 import javafx.fxml.FXML;
@@ -59,7 +60,11 @@ public class InsightFormController extends SuperController {
                 reservationService.getAll().size() + " reservations"
         );
 
-        // TODO: setUsername with SceneHandler
+        labelUsername.setText(
+                String.format("%s [%s] ",
+                        SceneHandler.getUser().getUsername(),
+                        SceneHandler.getUser().getRole())
+        );
 
         loadBarChart();
         loadPieChart();

@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d15f2b0-a57a-4da5-8ddc-bd5cf582461c" name="Changes" comment="Create User functionality">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/ReservationChartData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/profile.png" afterDir="false" />
+    <list default="true" id="7d15f2b0-a57a-4da5-8ddc-bd5cf582461c" name="Changes" comment="Create Insight Functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/Starter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/insights/InsightFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/insights/InsightFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/PaymentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/PaymentEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/ReservationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/ReservationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/ReservationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/ReservationDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/ReservationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/insights.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/insights.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/login/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/login/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/SceneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/SceneHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +94,7 @@
       <workItem from="1739815383667" duration="9000" />
       <workItem from="1739855978540" duration="19783000" />
       <workItem from="1739883863482" duration="11888000" />
-      <workItem from="1739937787916" duration="62785000" />
+      <workItem from="1739937787916" duration="64119000" />
     </task>
     <task id="LOCAL-00001" summary="Create login UI">
       <created>1739726332234</created>
@@ -199,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1740035280146</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Create Insight Functionality">
+      <created>1740038772477</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1740038772477</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +231,8 @@
     <MESSAGE value="Create Report Functionality" />
     <MESSAGE value="Fix Report Export to PDF Alert" />
     <MESSAGE value="Create User functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create User functionality" />
+    <MESSAGE value="Create Insight Functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Insight Functionality" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaFX_Hotel_Management$Run_main.ic" NAME="Run main Coverage Results" MODIFIED="1739883789258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -21,6 +21,6 @@ public class Starter extends Application {
         stage.initStyle(StageStyle.TRANSPARENT);
 
         SceneHandler.setStage(stage);
-        SceneHandler.changeScene(SceneType.DASHBOARD);
+        SceneHandler.changeScene(SceneType.LOGIN);
     }
 }
