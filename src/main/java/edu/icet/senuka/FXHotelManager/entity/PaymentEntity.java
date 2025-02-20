@@ -14,7 +14,7 @@ public class PaymentEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(nullable = false)
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private ReservationEntity reservation;

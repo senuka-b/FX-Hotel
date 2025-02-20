@@ -1,5 +1,6 @@
 package edu.icet.senuka.FXHotelManager.repository.custom.impl;
 
+import edu.icet.senuka.FXHotelManager.dto.ReservationChartData;
 import edu.icet.senuka.FXHotelManager.entity.CheckInOutEntity;
 import edu.icet.senuka.FXHotelManager.entity.ReservationEntity;
 import edu.icet.senuka.FXHotelManager.repository.custom.ReservationDao;
@@ -8,7 +9,9 @@ import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.sound.sampled.ReverbType;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReservationDaoImpl implements ReservationDao {
@@ -76,5 +79,33 @@ public class ReservationDaoImpl implements ReservationDao {
         transaction.commit();
 
         return from_reservationEntity;
+    }
+
+    @Override
+    public List<ReservationChartData> getReservationChartData() {
+
+        Session session = HibernateConfig.getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<Object[]> resultList = session.createQuery(
+                " SELECT (r.id, SUM(p.amountPaid)) " +
+                        "FROM PaymentEntity p JOIN p.reservation r ON p.reservation.id = r.id " +
+                        "GROUP BY r.id",
+
+                Object[].class
+        ).list();
+
+        ArrayList<ReservationChartData> dataList = new ArrayList<>();
+        for (Object[] row : resultList) {
+            long reservationId = (long) row[0];
+            double revenue = (double) row[1];
+            ReservationChartData data = new ReservationChartData(reservationId, revenue);
+            dataList.add(data);
+        }
+
+        transaction.commit();
+
+        return dataList;
+
     }
 }

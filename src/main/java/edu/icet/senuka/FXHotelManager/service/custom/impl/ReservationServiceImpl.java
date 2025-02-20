@@ -3,6 +3,7 @@ package edu.icet.senuka.FXHotelManager.service.custom.impl;
 import com.google.inject.Inject;
 import edu.icet.senuka.FXHotelManager.dto.CheckInOut;
 import edu.icet.senuka.FXHotelManager.dto.Reservation;
+import edu.icet.senuka.FXHotelManager.dto.ReservationChartData;
 import edu.icet.senuka.FXHotelManager.dto.Room;
 import edu.icet.senuka.FXHotelManager.entity.CheckInOutEntity;
 import edu.icet.senuka.FXHotelManager.entity.ReservationEntity;
@@ -129,5 +130,10 @@ public class ReservationServiceImpl implements ReservationService {
         ));
 
         return reservationList;
+    }
+
+    @Override
+    public List<ReservationChartData> getReservationChartData() {
+        return dao.getReservationChartData();
     }
 }

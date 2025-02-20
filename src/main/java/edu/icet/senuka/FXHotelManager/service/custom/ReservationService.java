@@ -1,6 +1,7 @@
 package edu.icet.senuka.FXHotelManager.service.custom;
 
 import edu.icet.senuka.FXHotelManager.dto.Reservation;
+import edu.icet.senuka.FXHotelManager.dto.ReservationChartData;
 import edu.icet.senuka.FXHotelManager.service.SuperService;
 
 import java.util.List;
@@ -16,4 +17,5 @@ public interface ReservationService extends SuperService {
     public List<Reservation> getAll();
 
     public List<Reservation> getCheckOutReservations();
+    public List<ReservationChartData> getReservationChartData();
 }
