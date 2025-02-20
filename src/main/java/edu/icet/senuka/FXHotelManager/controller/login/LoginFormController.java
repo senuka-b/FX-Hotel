@@ -43,7 +43,7 @@ public class LoginFormController extends SuperController  {
 
 
         if (loggedInUser != null) {
-            showAlert(Alert.AlertType.INFORMATION, "Login Successful!", "Welcome User !", "Hope you enjoy your stay!");
+            showAlert(Alert.AlertType.INFORMATION, "Login Successful!", "Welcome "+ loggedInUser.getUsername() + " !", "Hope you enjoy your stay!");
 
             SceneHandler.setUser(loggedInUser);
             SceneHandler.changeScene(SceneType.DASHBOARD);

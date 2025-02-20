@@ -3,6 +3,7 @@ package edu.icet.senuka.FXHotelManager.entity;
 import edu.icet.senuka.FXHotelManager.util.types.RoleType;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CollectionId;
 
 
 @Entity
@@ -19,6 +20,9 @@ public class UserEntity {
 
     @Column(nullable = false)
     private String password;
+
+    @Column(nullable = false)
+    private String email;
 
     @Enumerated(EnumType.STRING)
     private RoleType role;

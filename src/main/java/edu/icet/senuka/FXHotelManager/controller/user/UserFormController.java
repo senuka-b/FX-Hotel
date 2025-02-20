@@ -27,6 +27,9 @@ public class UserFormController extends SuperController {
     private TableColumn<?, ?> columnUsername;
 
     @FXML
+    private TableColumn<?, ?> columnEmail;
+
+    @FXML
     private ComboBox<RoleType> comboBoxRole;
 
     @FXML
@@ -40,6 +43,9 @@ public class UserFormController extends SuperController {
 
     @FXML
     private TextField textFieldUsername;
+
+    @FXML
+    private TextField textFieldEmail;
 
 
     @Inject
@@ -119,7 +125,7 @@ public class UserFormController extends SuperController {
                 showAlert(
                         Alert.AlertType.INFORMATION,
                         "Success!",
-                        "Updated user succesfully",
+                        "Updated user successfully",
                         "The user with username " + selectedItem.getUsername() + " has been updated successfully!"
                 );
             }
@@ -163,6 +169,7 @@ public class UserFormController extends SuperController {
         columnID.setCellValueFactory(new PropertyValueFactory<>("id"));
         columnUsername.setCellValueFactory(new PropertyValueFactory<>("username"));
         columnRole.setCellValueFactory(new PropertyValueFactory<>("role"));
+        columnEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
 
         tableUser.getSelectionModel().selectedItemProperty().addListener(
                 (observableValue, user, t1) -> populateInputFields()
@@ -184,13 +191,14 @@ public class UserFormController extends SuperController {
 
             textFieldUsername.setText(selectedItem.getUsername());
             textFieldPassword.setText(selectedItem.getPassword());
+            textFieldEmail.setText(selectedItem.getEmail());
             comboBoxRole.getSelectionModel().select(selectedItem.getRole());
         }
 
     }
 
     private boolean validateTextFields() {
-        for (TextField field : new TextField[]{textFieldUsername, textFieldPassword}) {
+        for (TextField field : new TextField[]{textFieldUsername, textFieldPassword, textFieldEmail}) {
             if (field.getText().trim().equals("")) {
                 showAlert(
                         Alert.AlertType.ERROR,
@@ -206,7 +214,7 @@ public class UserFormController extends SuperController {
     }
 
     private void clearTextFields() {
-        for (TextField field : new TextField[]{textFieldUsername, textFieldPassword})
+        for (TextField field : new TextField[]{textFieldUsername, textFieldPassword, textFieldEmail})
             field.setText("");
     }
 }

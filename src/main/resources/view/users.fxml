@@ -69,19 +69,20 @@
             </Text>
          </center>
       </BorderPane>
-      <Button layoutX="39.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonAddOnAction" prefHeight="36.0" prefWidth="102.0" styleClass="success" text="Add" />
-      <TableView fx:id="tableUser" layoutX="25.0" layoutY="348.0" prefHeight="299.0" prefWidth="898.0">
+      <Button layoutX="38.0" layoutY="341.0" mnemonicParsing="false" onAction="#buttonAddOnAction" prefHeight="36.0" prefWidth="102.0" styleClass="success" text="Add" />
+      <TableView fx:id="tableUser" layoutX="25.0" layoutY="413.0" prefHeight="234.0" prefWidth="898.0">
          <columns>
-            <TableColumn fx:id="columnID" prefWidth="189.60000228881836" text="ID" />
-            <TableColumn fx:id="columnUsername" prefWidth="412.8000030517578" text="Username" />
-            <TableColumn fx:id="columnRole" prefWidth="296.800048828125" text="Role" />
+            <TableColumn fx:id="columnID" prefWidth="89.60000228881836" text="ID" />
+            <TableColumn fx:id="columnUsername" prefWidth="287.2000274658203" text="Username" />
+            <TableColumn fx:id="columnEmail" prefWidth="315.20001220703125" text="Email" />
+            <TableColumn fx:id="columnRole" prefWidth="207.99997558593748" text="Role" />
          </columns>
       </TableView>
       <TextField fx:id="textFieldUsername" layoutX="39.0" layoutY="97.0" prefHeight="36.0" prefWidth="334.0" promptText="Username" />
       <TextField fx:id="textFieldPassword" layoutX="39.0" layoutY="154.0" prefHeight="36.0" prefWidth="334.0" promptText="Password" />
       <TextField fx:id="textFieldSearch" layoutX="741.0" layoutY="301.0" onKeyReleased="#textFieldSearchOnKeyRelease" promptText="Search 🔎" />
-      <Button layoutX="155.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonDeleteOnAction" prefHeight="36.0" prefWidth="102.0" styleClass="danger" text="Delete" />
-      <Button layoutX="273.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonUpdateOnAction" prefHeight="36.0" prefWidth="102.0" style="-fx-background-color: yellow; -fx-text-fill: black;" text="Update" />
+      <Button layoutX="154.0" layoutY="341.0" mnemonicParsing="false" onAction="#buttonDeleteOnAction" prefHeight="36.0" prefWidth="102.0" styleClass="danger" text="Delete" />
+      <Button layoutX="272.0" layoutY="341.0" mnemonicParsing="false" onAction="#buttonUpdateOnAction" prefHeight="36.0" prefWidth="102.0" style="-fx-background-color: yellow; -fx-text-fill: black;" text="Update" />
       <Text fx:id="labelHeader1" layoutX="647.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a user from the table to automatically fill in the fields for updates!" wrappingWidth="281.6001373291017">
          <font>
             <Font size="17.0" />
@@ -93,6 +94,7 @@
          </image>
       </ImageView>
       <Text fx:id="labelHeader11" layoutX="706.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start typing to filter through users" wrappingWidth="221.6001373291017" />
-      <ComboBox fx:id="comboBoxRole" layoutX="39.0" layoutY="216.0" prefHeight="36.0" prefWidth="334.0" />
+      <ComboBox fx:id="comboBoxRole" layoutX="38.0" layoutY="272.0" prefHeight="36.0" prefWidth="334.0" />
+      <TextField fx:id="textFieldEmail" layoutX="38.0" layoutY="215.0" prefHeight="36.0" prefWidth="334.0" promptText="Email" />
    </children>
 </AnchorPane>

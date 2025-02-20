@@ -14,7 +14,8 @@ public enum SceneType {
     BILLING("/view/billing.fxml"),
     REPORTS("/view/reports.fxml"),
     USERS("/view/users.fxml"),
-    VIEWPAYMENTDIALOG("/view/dialogs/view_payment.fxml");
+    VIEWPAYMENTDIALOG("/view/dialogs/view_payment.fxml"),
+    NOPERMISSION("/view/no_permission.fxml");
 
     private final String path;
 

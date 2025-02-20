@@ -6,6 +6,7 @@ import com.google.inject.Injector;
 import edu.icet.senuka.FXHotelManager.controller.SuperController;
 import edu.icet.senuka.FXHotelManager.controller.dashboard.DashboardFormController;
 import edu.icet.senuka.FXHotelManager.dto.User;
+import edu.icet.senuka.FXHotelManager.util.types.RoleType;
 import edu.icet.senuka.FXHotelManager.util.types.SceneType;
 import javafx.animation.Timeline;
 import javafx.beans.value.ChangeListener;
@@ -22,6 +23,7 @@ import jdk.jshell.spi.ExecutionControl;
 import lombok.Getter;
 
 import java.io.IOException;
+import java.util.*;
 import java.util.function.Consumer;
 
 @Getter
@@ -32,11 +34,52 @@ public class SceneHandler {
 
     private static User user;
 
+    private static Map<RoleType, List<SceneType>> permissions = new HashMap<>();
+
+    static {
+        // Admin Permissions
+        // ALL permissions
+        List<SceneType> adminPermissions = new ArrayList<>();
+        adminPermissions.addAll(List.of(SceneType.values()));
+
+        // Manager Permissions
+        // All permissions excluding Reports and Users
+        List<SceneType> managerPermissions = new ArrayList<>();
+        managerPermissions.addAll(Arrays.stream(SceneType.values())
+                .filter(sceneType -> !sceneType.equals(SceneType.USERS) && !sceneType.equals(SceneType.REPORTS))
+                .toList());
+
+        // Staff Permissions
+        List<SceneType> staffPermissions = new ArrayList<>();
+        staffPermissions.addAll(List.of(
+                SceneType.LOGIN,
+                SceneType.DASHBOARD,
+                SceneType.INSIGHTS,
+                SceneType.RESERVATION,
+                SceneType.CHECKINCHECKOUT,
+                SceneType.BILLING,
+                SceneType.VIEWPAYMENTDIALOG
+        ));
+
+        permissions.put(RoleType.Admin, adminPermissions);
+        permissions.put(RoleType.Manager, managerPermissions);
+        permissions.put(RoleType.Staff, staffPermissions);
+
+    }
+
+    private static String resolvePath(SceneType type) {
+        if (user == null) return type.getPath();
+
+        if (permissions.get(user.getRole()).contains(type)) {
+            return type.getPath();
+        }
+
+        return SceneType.NOPERMISSION.getPath();
+    }
+
     public static void changeScene(SceneType type) throws IOException {
 
-        System.out.println("USER " + user);
-
-        FXMLLoader loader = new FXMLLoader(SceneHandler.class.getResource(type.getPath()));
+        FXMLLoader loader = new FXMLLoader(SceneHandler.class.getResource(resolvePath(type)));
 
         Injector injector = Guice.createInjector(new AppModule());
         loader.setControllerFactory(injector::getInstance);

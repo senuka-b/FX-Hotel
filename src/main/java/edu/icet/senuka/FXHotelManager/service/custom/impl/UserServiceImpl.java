@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     public User login(User user) {
         UserEntity userEntity = dao.getUserByUsernameAndPassword(user.getUsername(), user.getPassword());
 
-        return mapper.map(userEntity, User.class);
+        return userEntity != null ? mapper.map(userEntity, User.class) : null;
     }
 
     @Override
