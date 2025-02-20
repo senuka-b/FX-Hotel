@@ -15,7 +15,7 @@
 
 <!--THIS FILE ACTS AS THE BASE FXML FILE WHICH ALL OTHER FXML FILES FOLLOW-->
 
-<AnchorPane prefHeight="586.0" prefWidth="654.0" style="-fx-border-color: cyan; -fx-border-width: 1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.senuka.FXHotelManager.controller.billing.ViewPaymentDialogFormController">
+<AnchorPane prefHeight="586.0" prefWidth="654.0" style="-fx-border-color: cyan; -fx-border-width: 1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.senuka.fxhotel_manager.controller.billing.ViewPaymentDialogFormController">
    <children>
 
       <HBox layoutX="178.0" layoutY="65.0" prefHeight="36.0" prefWidth="200.0" />
