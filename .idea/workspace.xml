@@ -5,102 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d15f2b0-a57a-4da5-8ddc-bd5cf582461c" name="Changes" comment="Refactor SonarLint">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/SuperDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/CheckInOutDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/CustomerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/PaymentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/ReservationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/RoomDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/SuperService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/CheckInOutService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/types/PaymentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/SuperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/SuperController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/billing/BillingFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/billing/BillingFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/billing/ViewPaymentDialogFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/billing/ViewPaymentDialogFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/checkinout/CheckInOutFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/checkinout/CheckInOutFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/checkinout/ClockWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/checkinout/ClockWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/customer/CustomerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/customer/CustomerFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/dashboard/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/dashboard/DashboardFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/insights/InsightFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/insights/InsightFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/login/ForgotPasswordDialogFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/login/ForgotPasswordDialogFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/login/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/login/LoginFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/nopermission/NoPermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/nopermission/NoPermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/report/ReportFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/report/ReportFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/reservation/ReservationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/reservation/ReservationFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/room/RoomFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/room/RoomFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/user/UserFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/controller/user/UserFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/CheckInOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/dto/CheckInOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/dto/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/dto/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/dto/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/ReservationChartData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/dto/ReservationChartData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/dto/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/CheckInOutEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/entity/CheckInOutEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/CustomerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/entity/CustomerEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/PaymentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/entity/PaymentEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/ReservationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/entity/ReservationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/RoomEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/entity/RoomEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/CrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/SuperDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/CheckInOutDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/CustomerDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/PaymentDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/ReservationDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/RoomDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/CheckInOutDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/impl/CheckInOutDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/CustomerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/impl/CustomerDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/PaymentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/impl/PaymentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/ReservationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/impl/ReservationDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/RoomDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/impl/RoomDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/repository/custom/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/repository/custom/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/SuperService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/CheckInOutService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/PaymentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/ReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/CheckInOutServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/impl/CheckInOutServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/ReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/impl/ReportServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/impl/ReservationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/RoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/impl/RoomServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/service/custom/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/AppModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/AppModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/HibernateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/OTPEmailThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/OTPEmailThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/ReportGenerationThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/ReportGenerationThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/SceneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/SceneHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/AvailabilityType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/types/AvailabilityType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/PaymentType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/ReportType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/types/ReportType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/ReservationStatusType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/types/ReservationStatusType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/RoleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/types/RoleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/types/RoomType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/SceneType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/fxhotel_manager/util/types/SceneType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/_base.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/_base.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/billing.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/billing.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/checkinout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/checkinout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/customer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dialogs/forgot_password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dialogs/forgot_password.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dialogs/view_payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dialogs/view_payment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/insights.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/insights.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/no_permission.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/no_permission.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/reports.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/reports.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/reservation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/reservation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/room.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/room.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/users.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/users.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +96,7 @@
       <workItem from="1739855978540" duration="19783000" />
       <workItem from="1739883863482" duration="11888000" />
       <workItem from="1739937787916" duration="72422000" />
-      <workItem from="1740062127458" duration="8211000" />
+      <workItem from="1740062127458" duration="9210000" />
     </task>
     <task id="LOCAL-00001" summary="Create login UI">
       <created>1739726332234</created>
@@ -325,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1740070904762</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Refactor SonarLint">
+      <created>1740072236699</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1740072236699</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
