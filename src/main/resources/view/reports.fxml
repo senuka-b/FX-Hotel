@@ -70,12 +70,16 @@
       <ComboBox fx:id="comboBoxReports" layoutX="266.0" layoutY="166.0" prefHeight="50.0" prefWidth="422.0" />
       <Line endX="61.60003662109375" endY="-86.60000610351562" layoutX="420.0" layoutY="315.0" startX="-94.5999755859375" startY="73.39999389648438" stroke="WHITE" strokeWidth="3.0" />
       <Line endX="-45.27862548828125" endY="-108.7213134765625" layoutX="529.0" layoutY="335.0" startX="100.60003662109375" startY="56.20001220703125" stroke="WHITE" strokeWidth="3.0" />
-      <Button layoutX="217.0" layoutY="398.0" mnemonicParsing="false" onAction="#buttonGenerateReportOnAction" prefHeight="34.0" prefWidth="211.0" styleClass="success" text="Generate Report">
+      <Button fx:id="buttonGenerateReport" layoutX="172.0" layoutY="398.0" mnemonicParsing="false" onAction="#buttonGenerateReportOnAction" prefHeight="44.0" prefWidth="282.0" text="Generate Report">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
+         <styleClass>
+            <String fx:value="success" />
+            <String fx:value="loading" />
+         </styleClass>
       </Button>
-      <Button layoutX="522.0" layoutY="398.0" mnemonicParsing="false" onAction="#buttonSaveReportOnAction" prefHeight="34.0" prefWidth="211.0" style="-fx-background-color: #EBC49F;" styleClass="success" text="Save Report to Disk">
+      <Button fx:id="buttonSaveReport" layoutX="503.0" layoutY="398.0" mnemonicParsing="false" onAction="#buttonSaveReportOnAction" prefHeight="44.0" prefWidth="291.0" style="-fx-background-color: #EBC49F;" styleClass="success" text="Save Report to Disk">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>

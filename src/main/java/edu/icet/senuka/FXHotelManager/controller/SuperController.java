@@ -33,6 +33,10 @@ public abstract class SuperController implements Initializable {
         setup();
     }
 
+    public Stage getStage(Stage stage) {
+        return stage;
+    }
+
     public void setup() {
         setupTitleBar();
         setupWindowControlButtons();

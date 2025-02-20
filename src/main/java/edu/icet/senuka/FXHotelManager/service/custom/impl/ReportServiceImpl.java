@@ -18,6 +18,7 @@ public class ReportServiceImpl implements ReportService {
     @Override
     public JasperPrint createCustomerReport() {
 
+
         JasperPrint jasperPrint = createReport(ReportType.Customer);
         JasperViewer.viewReport(jasperPrint, false);
 
@@ -79,6 +80,7 @@ public class ReportServiceImpl implements ReportService {
                     DriverManager.getConnection("jdbc:mysql://localhost:3306/fxhotel", "root", "1234")
 
             );
+
 
 
             return jasperPrint;

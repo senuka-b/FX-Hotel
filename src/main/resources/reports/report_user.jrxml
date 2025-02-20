@@ -1,0 +1,93 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="report_user" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="270a6510-3414-4656-9342-36f6b9e7f696">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FXHotelAdapterCustomer"/>
+	<style name="Title" fontName="Arial" fontSize="26.0" bold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18.0"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12.0" bold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12.0"/>
+	<query language="SQL"><![CDATA[SELECT * FROM user;]]></query>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user"/>
+	</field>
+	<field name="role" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="role"/>
+		<property name="com.jaspersoft.studio.field.label" value="role"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user"/>
+	</field>
+	<field name="username" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="username"/>
+		<property name="com.jaspersoft.studio.field.label" value="username"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user"/>
+	</field>
+	<group name="Group1">
+		<expression><![CDATA[$F{id}]]></expression>
+		<groupHeader>
+			<band height="40">
+				<element kind="textField" uuid="0af2eb97-cf9e-4640-a988-bc290a275a38" x="47" y="13" width="506" height="24" forecolor="#990099" bold="true" style="SubTitle">
+					<expression><![CDATA[$F{id}]]></expression>
+				</element>
+				<element kind="rectangle" uuid="901c162f-ce1a-4fa1-927d-c4e7adac5fed" mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+				<element kind="textField" uuid="d6dc71fe-0f5b-43a2-bdc2-0c049f3e9cd7" x="380" y="13" width="176" height="20" fontSize="16.0" bold="true" style="SubTitle">
+					<expression><![CDATA[$F{role}]]></expression>
+				</element>
+				<element kind="textField" uuid="08aa83f3-6c85-4efe-8f6a-fdfbc957aadf" x="130" y="13" width="230" height="20" fontSize="16.0" bold="true" style="SubTitle">
+					<expression><![CDATA[$F{username}]]></expression>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<expression><![CDATA[$F{role}]]></expression>
+	</group>
+	<group name="username">
+		<expression><![CDATA[$F{username}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="70" splitType="Stretch">
+		<element kind="image" uuid="88796d59-cd8c-43c1-853f-dd6acfa88258" x="275" y="0" width="300" height="64">
+			<expression><![CDATA[getClass().getResource("/assets/leaf_banner_violet.png").toString()]]></expression>
+		</element>
+		<element kind="staticText" uuid="bcf29663-c4b8-483e-a197-e5f6920fd2a2" x="0" y="13" width="263" height="33" vTextAlign="Middle" style="Title">
+			<text><![CDATA[FX Hotel]]></text>
+		</element>
+		<element kind="staticText" uuid="c089ef81-84c2-4243-a7e9-0e0a8992e71a" x="63" y="46" width="200" height="22" hTextAlign="Right" style="SubTitle">
+			<text><![CDATA[User Report]]></text>
+		</element>
+	</title>
+	<pageHeader splitType="Stretch"/>
+	<columnHeader height="36" splitType="Stretch">
+		<element kind="line" uuid="9d02e302-57b8-432b-babd-efb2418804ba" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1">
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<element kind="line" uuid="e333df44-9887-45d8-a569-1c4607976a27" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1">
+				<pen lineWidth="0.5" lineColor="#999999"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch">
+		<element kind="line" uuid="f4ea54fc-a4b9-4971-acd1-638c2e274a20" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1">
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</element>
+	</columnFooter>
+	<pageFooter height="20" splitType="Stretch">
+		<element kind="textField" uuid="433509ef-2a34-4797-9cd1-684511ae022d" x="433" y="0" width="80" height="20" fontSize="10.0" bold="false" hTextAlign="Right" style="Column header">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="27402784-6be1-4e60-b9c7-c3664ea17454" x="513" y="0" width="40" height="20" fontSize="10.0" evaluationTime="Report" bold="false" style="Column header">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="e16da2cc-f2dd-4b0a-a299-981148326ee6" x="0" y="0" width="197" height="20" fontSize="10.0" pattern="EEEEE dd MMMMM yyyy" bold="false" style="Column header">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary splitType="Stretch"/>
+</jasperReport>

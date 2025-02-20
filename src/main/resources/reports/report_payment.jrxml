@@ -1,0 +1,255 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="report_payment" language="java" columnCount="1" pageWidth="870" pageHeight="841" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="830" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4a1d5eb-82dd-412f-a620-202e4bdf9dba">
+	<property name="template.engine" value="tabular_template"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FXHotelAdapterCustomer"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Transparent" forecolor="#B89F7D" backcolor="#70A9C6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<dataset name="tableDataset" uuid="42657140-8a60-4b8d-8b0a-c70079b72d44">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FXHotelAdapterCustomer"/>
+		<query language="SQL"><![CDATA[SELECT 
+    p.id AS Payment_ID,
+    p.reservation_id AS Reservation_ID,
+    c.fullName AS Customer_Name,
+    cc.totalPrice AS Amount_To_Be_Paid,
+    p.amountPaid AS Amount_Paid,
+    p.paymentType AS Payment_Type
+FROM payment p
+JOIN reservation r ON p.reservation_id = r.id
+JOIN customer c ON r.customer_id = c.id
+JOIN check_in_out cc ON r.checkInCheckOutID = cc.id;]]></query>
+		<field name="Payment_ID" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.name" value="id"/>
+			<property name="com.jaspersoft.studio.field.label" value="Payment_ID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+		</field>
+		<field name="Reservation_ID" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.name" value="reservation_id"/>
+			<property name="com.jaspersoft.studio.field.label" value="Reservation_ID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+		</field>
+		<field name="Customer_Name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="fullName"/>
+			<property name="com.jaspersoft.studio.field.label" value="Customer_Name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+		</field>
+		<field name="Amount_To_Be_Paid" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.name" value="totalPrice"/>
+			<property name="com.jaspersoft.studio.field.label" value="Amount_To_Be_Paid"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="check_in_out"/>
+		</field>
+		<field name="Amount_Paid" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.name" value="amountPaid"/>
+			<property name="com.jaspersoft.studio.field.label" value="Amount_Paid"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+		</field>
+		<field name="Payment_Type" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="paymentType"/>
+			<property name="com.jaspersoft.studio.field.label" value="Payment_Type"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+		</field>
+		<group name="Payment_ID">
+			<expression><![CDATA[$F{Payment_ID}]]></expression>
+		</group>
+		<group name="Reservation_ID">
+			<expression><![CDATA[$F{Reservation_ID}]]></expression>
+		</group>
+		<group name="Customer_Name">
+			<expression><![CDATA[$F{Customer_Name}]]></expression>
+		</group>
+		<group name="Amount_To_Be_Paid">
+			<expression><![CDATA[$F{Amount_To_Be_Paid}]]></expression>
+		</group>
+		<group name="Amount_Paid">
+			<expression><![CDATA[$F{Amount_Paid}]]></expression>
+		</group>
+		<group name="Payment_Type">
+			<expression><![CDATA[$F{Payment_Type}]]></expression>
+		</group>
+	</dataset>
+	<query language="sql"><![CDATA[]]></query>
+	<title height="72">
+		<element kind="frame" uuid="6321f5e3-86eb-444f-acc1-8daaaa0d6c60" mode="Opaque" x="-20" y="-20" width="870" height="92" backcolor="#006699">
+			<element kind="staticText" uuid="9e48917a-7b59-4ffd-baad-725f45563194" x="20" y="20" width="234" height="43" forecolor="#FFFFFF" fontSize="34.0" bold="true">
+				<text><![CDATA[FX Hotel]]></text>
+			</element>
+			<element kind="staticText" uuid="0a399baa-bad3-4b1a-9fe3-bb1c563e6a27" x="570" y="20" width="280" height="50" forecolor="#FFFFFF" fontSize="30.0" bold="false" hTextAlign="Right">
+				<text><![CDATA[Payment Report]]></text>
+			</element>
+			<element kind="textField" uuid="576f3d21-d649-4231-8c30-3a7a14e11bea" x="180" y="36" width="230" height="25" forecolor="#FFFFFF" fontSize="16.0" pattern="EEEEE dd MMMMM yyyy">
+				<expression><![CDATA[new java.util.Date()]]></expression>
+			</element>
+		</element>
+	</title>
+	<pageHeader height="13"/>
+	<pageFooter height="22">
+		<element kind="textField" uuid="fed27553-a6c4-4a8a-9056-2f6f2589a3e5" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" hTextAlign="Right">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="9f5ad531-d413-49c9-874b-8b99e8150fa6" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" evaluationTime="Report">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="fc593335-5cbf-4caf-97b3-ff897c676bde" x="0" y="4" width="100" height="13" pattern="EEEEE dd MMMMM yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary height="300" splitType="Stretch">
+		<element kind="component" uuid="9ef77ce8-d374-4b73-8502-b2d25bf2fb7e" x="0" y="0" width="820" height="300">
+			<component kind="table">
+				<datasetRun uuid="7ed98c2e-698b-4c2e-a10b-6b876a67731d" subDataset="tableDataset">
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				</datasetRun>
+				<column kind="group" uuid="e681087a-3cc7-4e91-92c1-22a42ccbc739" width="810">
+					<groupHeader groupName="Payment_Type">
+						<cell height="25" rowSpan="1" style="Table_CH"/>
+					</groupHeader>
+					<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [6]"/>
+					<column kind="single" uuid="9c789ed4-4af3-4210-baa5-5b4da038402b" width="100">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="2" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="8a7ffb81-89d6-4374-b806-0169e291773a" mode="Transparent" x="0" y="0" width="100" height="30" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+								<text><![CDATA[Payment ID]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="2" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="86e147f6-1a0d-4de5-b4a5-6d678c8d0dca" key="" x="0" y="0" width="100" height="30" fontName="Arial" fontSize="14.0">
+								<expression><![CDATA[$F{Payment_ID}]]></expression>
+								<box leftPadding="2"/>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+					</column>
+					<column kind="single" uuid="445b945c-b8ea-42ba-9f8f-9f5aeff3a1ce" width="150">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="2" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="9e800aa7-0ab1-44d9-b852-1c764ae304cc" mode="Transparent" x="0" y="0" width="150" height="30" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+								<text><![CDATA[Payment Type]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="1dd2ef66-d133-449a-bd7e-47a227742659" key="" x="0" y="0" width="150" height="30" fontName="Arial" fontSize="14.0">
+								<expression><![CDATA[$F{Payment_Type}]]></expression>
+								<box leftPadding="2"/>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+					</column>
+					<column kind="single" uuid="fdc055d8-905b-4c2b-8de1-a8bd7d7fa60b" width="140">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="2" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="04a60cb5-25bf-447d-a38e-b3fb77c51ef1" mode="Transparent" x="0" y="0" width="140" height="30" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+								<text><![CDATA[Reservation ID]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="372525e8-231f-4ef0-bc6b-66a9b49e86f0" key="" x="0" y="0" width="140" height="30" fontName="Arial" fontSize="14.0">
+								<expression><![CDATA[$F{Reservation_ID}]]></expression>
+								<box leftPadding="2"/>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+					</column>
+					<column kind="single" uuid="9299e121-8154-4128-a17a-167753415759" width="120">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="2" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="a2d60155-c194-4cfc-a3ea-d8fd7bd33adc" mode="Transparent" x="0" y="0" width="120" height="30" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+								<text><![CDATA[Customer Name]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="6100b635-e32a-46f2-b81f-efab0d708bf0" key="" x="0" y="0" width="120" height="30" fontName="Arial" fontSize="14.0">
+								<expression><![CDATA[$F{Customer_Name}]]></expression>
+								<box leftPadding="2"/>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+					</column>
+					<column kind="single" uuid="4369f836-35d6-417c-9d6e-3edc13ac9b64" width="130">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="2" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="cf55e89f-3fbc-4ced-b292-548215cb3288" mode="Transparent" x="0" y="0" width="130" height="30" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+								<text><![CDATA[Amount_Paid]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="897fc599-5e06-4b1b-ae7b-495842e59c0f" key="" x="0" y="0" width="130" height="30" fontName="Arial" fontSize="14.0">
+								<expression><![CDATA[$F{Amount_Paid}]]></expression>
+								<box leftPadding="2"/>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+					</column>
+					<column kind="single" uuid="078c17c9-3682-4c17-9cf4-0f9cdf2826a3" width="170">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="eec38ec6-73e8-45c8-94ad-e9b0dcfc5d8d" mode="Transparent" x="0" y="0" width="170" height="30" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+								<text><![CDATA[Amount_To_Be_Paid]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="255a6929-8ad3-4071-9a0d-0d952877d2e0" key="" x="0" y="0" width="170" height="30" fontName="Arial" fontSize="14.0">
+								<expression><![CDATA[$F{Amount_To_Be_Paid}]]></expression>
+								<box leftPadding="2"/>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+					</column>
+				</column>
+			</component>
+			<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+			<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+			<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+		</element>
+		<property name="local_mesure_unitheight" value="pixel"/>
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
+	</summary>
+</jasperReport>

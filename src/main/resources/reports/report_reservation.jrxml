@@ -1,0 +1,169 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="report_reservation" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="270a6510-3414-4656-9342-36f6b9e7f696">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FXHotelAdapterCustomer"/>
+	<style name="Title" fontName="Arial" fontSize="26.0" bold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18.0"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12.0" bold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12.0"/>
+	<query language="SQL"><![CDATA[SELECT 
+    r.id AS Reservation_ID,
+    c.fullName AS Customer_Name,
+    c.phoneNumber AS Customer_Phone_Number,
+    r.room_id AS Room_ID,
+    cc.checkInDate AS Check_In_Date,
+    cc.checkOutDate AS Check_Out_Date,
+    r.status AS Status
+FROM reservation r
+JOIN customer c ON r.customer_id = c.id
+JOIN check_in_out cc ON r.checkInCheckOutID = cc.id;
+]]></query>
+	<field name="Reservation_ID" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Reservation_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="Customer_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fullName"/>
+		<property name="com.jaspersoft.studio.field.label" value="Customer_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="Customer_Phone_Number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="phoneNumber"/>
+		<property name="com.jaspersoft.studio.field.label" value="Customer_Phone_Number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="Room_ID" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="room_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Room_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="Check_In_Date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="checkInDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="Check_In_Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="check_in_out"/>
+	</field>
+	<field name="Check_Out_Date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="checkOutDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="Check_Out_Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="check_in_out"/>
+	</field>
+	<field name="Status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="Status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<group name="Group1">
+		<expression><![CDATA[$F{Reservation_ID}]]></expression>
+		<groupHeader>
+			<band height="42">
+				<element kind="textField" uuid="0af2eb97-cf9e-4640-a988-bc290a275a38" x="47" y="13" width="183" height="24" forecolor="#990099" bold="true" style="SubTitle">
+					<expression><![CDATA[$F{Reservation_ID}]]></expression>
+				</element>
+				<element kind="rectangle" uuid="901c162f-ce1a-4fa1-927d-c4e7adac5fed" mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#C961E8"/>
+				<element kind="textField" uuid="e7e7d36b-aacf-41b0-b39d-02efbcf52223" x="372" y="13" width="183" height="24" forecolor="#156F7D" bold="true" style="SubTitle">
+					<expression><![CDATA[$F{Status}]]></expression>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="31">
+				<element kind="textField" uuid="08cea289-a6e5-410e-941f-24f7987f98a7" x="92" y="6" width="390" height="21" fontSize="16.0" bold="true" style="SubTitle">
+					<expression><![CDATA[$F{Room_ID}]]></expression>
+				</element>
+				<element kind="staticText" uuid="440568bb-365b-4934-86fd-0690f1657449" x="0" y="4" width="69" height="23" fontSize="16.0">
+					<text><![CDATA[Room :]]></text>
+				</element>
+			</band>
+			<band height="71">
+				<element kind="line" uuid="f4ea54fc-a4b9-4971-acd1-638c2e274a20" positionType="FixRelativeToBottom" x="0" y="66" width="555" height="1">
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</element>
+				<element kind="textField" uuid="338546a3-5432-4edf-b38a-4a2358378a15" x="90" y="9" width="470" height="20" fontSize="16.0" bold="true" style="SubTitle">
+					<expression><![CDATA[$F{Check_In_Date} == null ? "No date"  : $F{Check_In_Date}]]></expression>
+				</element>
+				<element kind="textField" uuid="94c00a93-27ed-4b9f-90e9-187e05a960f0" x="90" y="42" width="460" height="20" fontSize="16.0" bold="true" style="SubTitle">
+					<expression><![CDATA[$F{Check_Out_Date} == null ? "No date"  : $F{Check_Out_Date}]]></expression>
+				</element>
+				<element kind="staticText" uuid="e237b50f-4eb5-4786-885c-37323528c8ef" x="0" y="8" width="80" height="30" fontSize="16.0">
+					<text><![CDATA[Check In :]]></text>
+				</element>
+				<element kind="staticText" uuid="fa93b03d-a0ae-42b5-95b9-9b61fc6fd3ca" x="0" y="41" width="90" height="30" fontSize="16.0">
+					<text><![CDATA[Check Out :]]></text>
+				</element>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<expression><![CDATA[$F{Customer_Name}]]></expression>
+		<groupHeader>
+			<band height="32">
+				<element kind="textField" uuid="d6dc71fe-0f5b-43a2-bdc2-0c049f3e9cd7" x="90" y="0" width="460" height="20" fontSize="16.0" bold="true" style="SubTitle">
+					<expression><![CDATA[$F{Customer_Name}]]></expression>
+				</element>
+				<element kind="staticText" uuid="fbb10840-202f-40d7-968a-fcd55153d455" x="-1" y="0" width="63" height="30" fontSize="16.0">
+					<text><![CDATA[Name :]]></text>
+				</element>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Customer_Phone_Number">
+		<expression><![CDATA[$F{Customer_Phone_Number}]]></expression>
+	</group>
+	<group name="Room_ID">
+		<expression><![CDATA[$F{Room_ID}]]></expression>
+	</group>
+	<group name="Check_In_Date">
+		<expression><![CDATA[$F{Check_In_Date}]]></expression>
+	</group>
+	<group name="Check_Out_Date">
+		<expression><![CDATA[$F{Check_Out_Date}]]></expression>
+	</group>
+	<group name="Status">
+		<expression><![CDATA[$F{Status}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="70" splitType="Stretch">
+		<element kind="image" uuid="88796d59-cd8c-43c1-853f-dd6acfa88258" x="275" y="0" width="300" height="64">
+			<expression><![CDATA[getClass().getResource("/assets/leaf_banner_violet.png").toString()]]></expression>
+		</element>
+		<element kind="staticText" uuid="bcf29663-c4b8-483e-a197-e5f6920fd2a2" x="0" y="13" width="263" height="33" vTextAlign="Middle" style="Title">
+			<text><![CDATA[FX Hotel]]></text>
+		</element>
+		<element kind="staticText" uuid="c089ef81-84c2-4243-a7e9-0e0a8992e71a" x="63" y="46" width="200" height="22" hTextAlign="Right" style="SubTitle">
+			<text><![CDATA[Reservation Report]]></text>
+		</element>
+	</title>
+	<pageHeader splitType="Stretch"/>
+	<columnHeader height="36" splitType="Stretch">
+		<element kind="line" uuid="9d02e302-57b8-432b-babd-efb2418804ba" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1">
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<element kind="line" uuid="e333df44-9887-45d8-a569-1c4607976a27" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1">
+				<pen lineWidth="0.5" lineColor="#999999"/>
+			</element>
+			<element kind="textField" uuid="e23c9236-1542-4a01-b524-765d3779584f" x="90" y="8" width="390" height="20" fontSize="16.0" bold="true" style="SubTitle">
+				<expression><![CDATA[$F{Customer_Phone_Number}]]></expression>
+			</element>
+			<element kind="staticText" uuid="179838fc-e192-4c5a-b759-5e165956d4a1" x="0" y="4" width="63" height="28" fontSize="16.0">
+				<text><![CDATA[Phone :]]></text>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+	<pageFooter height="31" splitType="Stretch">
+		<element kind="textField" uuid="433509ef-2a34-4797-9cd1-684511ae022d" x="433" y="0" width="80" height="20" fontSize="10.0" bold="false" hTextAlign="Right" style="Column header">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="27402784-6be1-4e60-b9c7-c3664ea17454" x="513" y="0" width="40" height="20" fontSize="10.0" evaluationTime="Report" bold="false" style="Column header">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="e16da2cc-f2dd-4b0a-a299-981148326ee6" x="0" y="0" width="197" height="20" fontSize="10.0" pattern="EEEEE dd MMMMM yyyy" bold="false" style="Column header">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary splitType="Stretch"/>
+</jasperReport>
