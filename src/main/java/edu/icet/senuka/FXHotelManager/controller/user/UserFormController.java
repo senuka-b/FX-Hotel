@@ -59,6 +59,7 @@ public class UserFormController extends SuperController {
                 User.builder()
                         .username(textFieldUsername.getText().trim())
                         .password(textFieldPassword.getText().trim())
+                        .email(textFieldEmail.getText())
                         .role(comboBoxRole.getSelectionModel().getSelectedItem())
                         .build()
         );
@@ -115,6 +116,7 @@ public class UserFormController extends SuperController {
 
             selectedItem.setUsername(textFieldUsername.getText().trim());
             selectedItem.setPassword(textFieldPassword.getText().trim());
+            selectedItem.setEmail(textFieldEmail.getText());
             selectedItem.setRole(comboBoxRole.getSelectionModel().getSelectedItem());
 
             boolean updateUser = service.updateUser(
