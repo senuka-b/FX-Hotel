@@ -36,7 +36,7 @@ public class LoginFormController extends SuperController  {
                 .password(textFieldPassword.getText().trim())
                 .build();
 
-        if (service.login(user)) {
+        if (service.login(user) != null) {
             showAlert(Alert.AlertType.INFORMATION, "Login Successful!", "Welcome User !", "Hope you enjoy your stay!");
 //            SceneHandler.changeScene();
 

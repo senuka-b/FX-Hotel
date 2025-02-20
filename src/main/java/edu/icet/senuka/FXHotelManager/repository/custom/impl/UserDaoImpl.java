@@ -1,9 +1,11 @@
 package edu.icet.senuka.FXHotelManager.repository.custom.impl;
 
+import edu.icet.senuka.FXHotelManager.entity.CustomerEntity;
 import edu.icet.senuka.FXHotelManager.entity.UserEntity;
 import edu.icet.senuka.FXHotelManager.repository.custom.UserDao;
 import edu.icet.senuka.FXHotelManager.util.HibernateConfig;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.List;
@@ -11,17 +13,35 @@ import java.util.List;
 public class UserDaoImpl implements UserDao {
     @Override
     public boolean save(UserEntity entity) {
-        return false;
+        Session session = HibernateConfig.getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.persist(entity);
+        transaction.commit();
+
+        return true;
     }
 
     @Override
     public boolean update(UserEntity entity) {
-        return false;
+        Session session = HibernateConfig.getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.merge(entity);
+        transaction.commit();
+
+        return true;
     }
 
     @Override
     public boolean delete(UserEntity entity) {
-        return false;
+        Session session = HibernateConfig.getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.remove(entity);
+        transaction.commit();
+
+        return true;
     }
 
     @Override
@@ -40,5 +60,22 @@ public class UserDaoImpl implements UserDao {
 
         return query.getSingleResultOrNull();
 
+    }
+
+    @Override
+    public List<UserEntity> getSearchResults(String searchQuery, Integer limit) {
+        Session session = HibernateConfig.getSession();
+
+        Transaction transaction = session.beginTransaction();
+
+        List<UserEntity> searchResults = session.createQuery(
+                        "FROM UserEntity u WHERE u.username LIKE :query",
+                        UserEntity.class)
+                .setParameter("query", "%" + searchQuery + "%")
+                .setMaxResults(limit)
+                .getResultList();
+
+        transaction.commit();
+        return searchResults;
     }
 }

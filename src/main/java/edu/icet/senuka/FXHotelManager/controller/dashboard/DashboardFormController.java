@@ -71,4 +71,7 @@ public class DashboardFormController extends SuperController {
     }
 
 
+    public void buttonUsersOnAction(ActionEvent actionEvent) throws IOException {
+        SceneHandler.changeScene(SceneType.USERS);
+    }
 }
