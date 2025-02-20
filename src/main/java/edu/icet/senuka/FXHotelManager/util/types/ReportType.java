@@ -8,5 +8,4 @@ public enum ReportType {
     Room,
     User;
 
-
 }

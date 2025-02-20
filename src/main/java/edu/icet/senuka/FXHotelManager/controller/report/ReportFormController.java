@@ -85,16 +85,14 @@ public class ReportFormController extends SuperController {
                 file,
                 reportService,
                 comboBoxReports.getSelectionModel().getSelectedItem(),
-                print -> {
+                print -> {}
+        );
 
-                    showAlert(
-                            Alert.AlertType.INFORMATION,
-                            "Success",
-                            "Save Report",
-                            "Successfully saved the generated report to your disk!"
-                    );
-
-                }
+        showAlert(
+                Alert.AlertType.INFORMATION,
+                "Success",
+                "Save Report",
+                "Successfully saved the generated report to your disk!"
         );
 
 
