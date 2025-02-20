@@ -58,6 +58,7 @@ public class LoginFormController extends SuperController  {
 
     }
 
-    public void buttonForgotPasswordOnAction(ActionEvent actionEvent) {
+    public void buttonForgotPasswordOnAction(ActionEvent actionEvent) throws IOException {
+        SceneHandler.createDialog(SceneType.FORGOTPASSWORD).show();
     }
 }

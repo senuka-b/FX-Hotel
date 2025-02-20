@@ -8,7 +8,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -33,7 +32,7 @@ public abstract class SuperController implements Initializable {
         setup();
     }
 
-    public Stage getStage(Stage stage) {
+    public Stage getStage() {
         return stage;
     }
 

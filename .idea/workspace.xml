@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d15f2b0-a57a-4da5-8ddc-bd5cf582461c" name="Changes" comment="Create Login functionality">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/nopermission/NoPermissionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/no-permission.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/no_permission.fxml" afterDir="false" />
+    <list default="true" id="7d15f2b0-a57a-4da5-8ddc-bd5cf582461c" name="Changes" comment="Add Email to User Form&#10;Fix Login Wrong Credentials Error">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/login/ForgotPasswordDialogFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/OTPEmailThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/dialogs/forgot_password.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/SuperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/SuperController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/login/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/login/LoginFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/user/UserFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/controller/user/UserFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/service/custom/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/SceneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/SceneHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/SceneType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/senuka/FXHotelManager/util/types/SceneType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/users.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/users.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +24,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -48,33 +45,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/ICD113/JAVAFX/JavaFX-Hotel-Management/src/main/resources/view",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/ICD113/JAVAFX/JavaFX-Hotel-Management/src/main/resources/view/dialogs&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="edu.icet.senuka.FXHotelManager.controller.report" />
       <recent name="edu.icet.senuka.FXHotelManager.controller.reservation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\view\dialogs" />
       <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\view" />
       <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\reports" />
-      <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\view\dialogs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources" />
       <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\assets" />
       <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resources\reports" />
       <recent name="E:\ICD113\JAVAFX\JavaFX-Hotel-Management\src\main\resource\assets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.icet.senuka.FXHotelManager.util" />
     </key>
   </component>
   <component name="RunManager">
@@ -101,7 +102,8 @@
       <workItem from="1739815383667" duration="9000" />
       <workItem from="1739855978540" duration="19783000" />
       <workItem from="1739883863482" duration="11888000" />
-      <workItem from="1739937787916" duration="68395000" />
+      <workItem from="1739937787916" duration="72422000" />
+      <workItem from="1740062127458" duration="5989000" />
     </task>
     <task id="LOCAL-00001" summary="Create login UI">
       <created>1739726332234</created>
@@ -215,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1740040209805</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add Email to User Form&#10;Fix Login Wrong Credentials Error">
+      <created>1740047538940</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1740047538940</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +256,8 @@
     <MESSAGE value="Create User functionality" />
     <MESSAGE value="Create Insight Functionality" />
     <MESSAGE value="Create Login functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Login functionality" />
+    <MESSAGE value="Add Email to User Form&#10;Fix Login Wrong Credentials Error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Email to User Form&#10;Fix Login Wrong Credentials Error" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaFX_Hotel_Management$Run_main.ic" NAME="Run main Coverage Results" MODIFIED="1739883789258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

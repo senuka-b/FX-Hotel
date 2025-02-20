@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum SceneType {
     LOGIN("/view/login.fxml"),
+    FORGOTPASSWORD("/view/dialogs/forgot_password.fxml"),
     DASHBOARD("/view/dashboard.fxml"),
     INSIGHTS("/view/insights.fxml"),
     CUSTOMER("/view/customer.fxml"),
