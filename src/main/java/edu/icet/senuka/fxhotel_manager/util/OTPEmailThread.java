@@ -26,7 +26,10 @@ public class OTPEmailThread {
                     new jakarta.mail.Authenticator() {
                         @Override
                         protected PasswordAuthentication getPasswordAuthentication() {
-                            return new PasswordAuthentication(secrets.getProperty("email"), secrets.getProperty("password"));
+                            return new PasswordAuthentication(
+                                    secrets.getProperty("email"),
+                                    secrets.getProperty("password")
+                            );
                         }
                     });
 

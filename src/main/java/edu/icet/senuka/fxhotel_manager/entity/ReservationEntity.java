@@ -3,6 +3,10 @@ package edu.icet.senuka.fxhotel_manager.entity;
 import edu.icet.senuka.fxhotel_manager.util.types.ReservationStatusType;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -19,6 +23,7 @@ public class ReservationEntity {
 
     @ManyToOne
     @JoinColumn(nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private CustomerEntity customer;
 
     @OneToOne
@@ -28,6 +33,9 @@ public class ReservationEntity {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ReservationStatusType status;
+
+    @OneToMany(mappedBy = "reservation", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<PaymentEntity> payments;
 
 
 }
